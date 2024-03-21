@@ -1,0 +1,414 @@
+.ProductContainer {
+  height: 100%;
+  width: 100%;
+  margin-top: 72px;
+//   position: relative;
+  .poster {
+    height: 440px;
+    // min-height: 426px;
+    position: relative;
+    z-index: -1;
+    // max-height: fit-content;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-image: url("https://res.cloudinary.com/mejuri-com/image/upload/c_scale,f_auto,q_60,w_1980/v1708541630/2024/FEB%20EVERGREEN/WEB/FEB%2023/Feb-bestsellers-HPH-D");
+    // position: relative;
+    object-position: top left;
+    border: 1px solid black;
+    img {
+      width: 100%;
+      height: 100%;
+      //   object-position: bottom left;
+      object-fit: cover;
+    }
+    .posterContent {
+      position: absolute;
+      //   top: 40px;
+      bottom: 16%;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 32px;
+      z-index: 1;
+      h1 {
+        font-size: 54px;
+        font-weight: bolder;
+        color: rgb(255, 255, 255);
+        padding-bottom: 16px;
+        //    line-height: 53px;
+      }
+      a {
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: underline;
+        letter-spacing: 1px;
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+  .sideGrid {
+    display: flex;
+    width: 100%;
+
+    // position: absolute;
+    // grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    border-left: 1px solid rgb(0, 0, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    // grid-template-columns: repeat(auto-fit, minmax(0px, 1fr)) ;  //@media (min-width: 768px)
+    .column {
+      // display: grid;
+      border-right: 1px solid rgb(0, 0, 0);
+      border-bottom: 1px solid rgb(0, 0, 0);
+      // grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      // height: 380px;
+      // width: 320px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    position: relative;
+    height: 100%;
+    transition:  left 0.3s linear ;
+    z-index: 0;
+      .gridTitle {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+        height: 40px;
+        // width: 100%;
+        padding: 10px;
+      }
+
+      .gridTitle:hover {
+        height: 40px;
+        width: 100%;
+        padding: 10px;
+        background: black;
+        color: white;
+        text-decoration: underline;
+      }
+    }
+    .nohover,
+    .hovered {
+      width: 100%;
+      height: 278px;
+
+      background-size: cover;
+    }
+  }
+  .gridPoster{
+     width: 100%;
+      height: 98%;
+      display: grid;
+       grid-template-columns: repeat(2,1fr);
+       cursor: pointer;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-right: 0px;
+      img{width: 100%;
+        height: 100%;
+         object-fit: cover;
+      }
+      .gridPost{
+         position: relative;
+    border-left: 1px solid rgb(0, 0, 0);
+         .posterContent{
+             position: absolute;
+             padding: 40px 32px;
+             bottom: 4%;
+              width: 100%;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+                h1{
+                     font-size: 40px;
+                     line-height: 44px;
+                      font-weight: 600;
+                      color:white;
+                      letter-spacing: -2px;
+                      margin-bottom: 16px;
+                      text-align: center;
+                }  
+                 button{
+                    outline: none;
+                     color: white;
+                     border: none;
+                     background: none;
+                      text-decoration: underline;
+                       font-size: 14px;
+                       font-weight: 500;
+                        line-height: 22px;
+
+                 }  
+                .title2,.button2{
+                    color: black;
+                }        
+         }
+      }
+     
+  }
+  .main_spinner{
+    height: 48px;
+    overflow: hidden;
+    position: relative;
+     display: flex;
+     background: #BDA37D;
+     gap: 16px;
+     border-bottom: 1px solid;
+     align-items: center;
+    .roll{
+        display: flex;
+        position: absolute;
+        overflow: hidden;
+      align-items: center;
+        animation: marquee 80s linear infinite;
+
+        gap: 32px;
+    white-space: nowrap;
+
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    color: rgb(0, 0, 0);
+        .btns{
+            // padding: 8px 16px;
+             font-size: 14px;
+              font-weight: 600;
+              text-transform: uppercase;   
+       }
+       .btns:nth-child(even){
+         font-size: 16px;
+        font-weight: 700;
+       }
+    }
+    @keyframes marquee {
+        0% { left: 100%; }
+        100% { left: -100%; }
+      }
+
+
+}
+.service{
+     display: grid;
+      grid-template-columns: 1fr 1fr;
+    //    position: relative;
+        overflow: hidden;
+      .stores{
+position: absolute;
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+span{
+    right: 0;
+     bottom: 0;
+      font-size: 23px;
+       color: white;
+}
+      }
+       
+}
+}
+@media (min-width: 1441px) {
+    .ProductContainer{
+        .sideGrid{
+            .nohover,
+            .hovered {
+              width: 100%;
+              height: 350px;
+              background: #F0F0F0;
+        background-repeat: no-repeat;
+            //   background-size: contain;
+               background-position: center;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 319px) and (max-width: 374px) {
+  .ProductContainer {
+    margin-top: 56px;
+
+    .poster {
+      height: 426px;
+      background-size: cover;
+      background-position: initial;
+      background-repeat: no-repeat;
+      background-image: url("https://res.cloudinary.com/mejuri-com/image/upload/c_scale,f_auto,q_60,w_640/v1708541624/2024/FEB%20EVERGREEN/WEB/FEB%2023/Feb-bestsellers-HPH-M");
+      .posterContent {
+        top: 74%;
+        h1 {
+          font-size: 32px;
+        }
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+    .sideGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+     
+        z-index: -1;
+        .nohover,
+        .hovered {
+          width: 100%;
+          height: 198px;
+          background-size: cover;
+        }
+   }
+   .gridPoster{
+    grid-template-columns: 1fr;
+ .gridPost{
+     height: 76vh;
+     .posterContent{
+        padding: 0;
+         bottom: 5%;
+        h1{
+            padding-top: 30px;
+             font-size: 24px;
+             line-height: 0;
+        }
+        button{
+             font-size: 12px;
+        }
+     }
+ }
+}
+.main_spinner{
+    .roll{
+        animation-duration: 15s;
+    }
+}
+
+    
+  }
+}
+@media (min-width: 375px) and (max-width: 424px) {
+    .ProductContainer {
+        margin-top: 56px;
+        .poster {
+          height: 498px;
+          background-size: cover;
+          background-position: initial;
+          background-repeat: no-repeat;
+          background-size: cover;
+    
+          background-image: url("https://res.cloudinary.com/mejuri-com/image/upload/c_scale,f_auto,q_60,w_640/v1708541624/2024/FEB%20EVERGREEN/WEB/FEB%2023/Feb-bestsellers-HPH-M");
+          .posterContent {
+            bottom: 9%;
+            h1 {
+              font-size: 22px;
+              letter-spacing: 0.1px;
+            }
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+        .sideGrid{
+             display: grid;
+             grid-template-columns: 1fr 1fr;
+             
+        z-index: -1;
+             .nohover,
+             .hovered {
+               width: 100%;
+               height: 232px;
+               background-size: cover;
+             }
+        }
+    
+        .gridPoster{
+            grid-template-columns: 1fr;
+         .gridPost{
+             height: 91vh;
+             .posterContent{
+                h1{
+                    padding-top: 30px;
+                     font-size: 26px;
+                     line-height: 0;
+                }
+                button{
+                     font-size: 14px;
+                }
+             }
+         }
+        }
+        .main_spinner{
+            .roll{
+                animation-duration: 15s;
+            }
+        }
+      }
+}
+@media (min-width: 425px) and (max-width: 767px) {
+  .ProductContainer {
+    margin-top: 0px;
+    .poster {
+      height: 100%;
+      background-size: cover;
+      background-position: initial;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      background-image: url("https://res.cloudinary.com/mejuri-com/image/upload/c_scale,f_auto,q_60,w_640/v1708541624/2024/FEB%20EVERGREEN/WEB/FEB%2023/Feb-bestsellers-HPH-M");
+      .posterContent {
+        bottom: 7%;
+        h1 {
+          font-size: 22px;
+          letter-spacing: 0.1px;
+        }
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+    .sideGrid{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+        
+        z-index: -1;
+         .nohover,
+         .hovered {
+           width: 100%;
+           height: 263px;
+           background-size: cover;
+         }
+    }
+
+    .gridPoster{
+        grid-template-columns: 1fr;
+//         .gridPost{ .posterContent{ h1{
+// text-align: center;
+//         }}}
+     
+     .gridPost{
+         height: 100vh;
+         .posterContent{
+            h1{
+                padding-top: 30px;
+                 font-size: 26px;
+                 line-height: 0;
+            }
+            button{
+                 font-size: 14px;
+            }
+         }
+     }
+    }
+    .main_spinner{
+        .roll{
+            animation-duration: 15s;
+        }
+    }
+  }
+}
